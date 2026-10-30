@@ -14,3 +14,20 @@
   ?simulation=lent à l'adresse appelée. Retirez-le avant de rendre.
 */
 const API_URL = "http://localhost:8080/api/agora";
+
+async function getSalles() {
+  const response = await fetch("http://localhost:8080/api/agora/salles", {
+    method: "GET"
+  });
+
+  if (!response.ok) {
+    console.log(response.status)
+  }
+
+  const data = await response.json();
+  console.log(data);
+
+  return data;
+}
+
+getSalles();
