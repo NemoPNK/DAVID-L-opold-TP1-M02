@@ -1,24 +1,94 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agora</title>
-    <link rel="icon" type="image/svg+xml" href="/icones/batiment.svg" />
 
-    <!-- Police Public Sans (Google Fonts), graisses 400, 600 et 700 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agora</title>
+  <link rel="icon" type="image/svg+xml" href="/icones/batiment.svg" />
 
-    <link rel="stylesheet" href="/style.css" />
-    <script type="module" src="/main.js"></script>
-  </head>
-  <body>
-    <!--
+  <!-- Police Public Sans (Google Fonts), graisses 400, 600 et 700 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" />
+
+  <link rel="stylesheet" href="/style.css" />
+  <script type="module" src="/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <button><img src="public/icones/menu.svg" alt="Icone burger du menu (3 trait)"></button>
+      <span>
+        <img src="public/icones/batiment.svg" alt="Icone d'un batiment">
+        <h2>Agora</h2>
+      </span>
+      <a href="profile.html"><img src="public/icones/personnes.svg" alt=""></a>
+    </nav>
+  </header>
+  <main>
+    <h1 class="titre-page">Trouver une salle</h1>
+    <div class="filtre-container">
+      <span>
+        <img src="public/icones/filtre.svg" alt="">
+        <p>FILTRES</p>
+      </span>
+      <span class="recherche-container">
+        <img src="public/icones/recherche.svg" alt="Icone d'une loupe">
+        <input type="search" class="recherche" placeholder="Rechercher une salle">
+      </span>
+      <div class="quartier">
+        <label for="quartier">Quartier</label>
+        <select name="quartier" id="quartier">Tous les quartier</select>
+      </div>
+      <div class="capacité">
+        <p>Capacité minimale</p>
+        <input type="text" placeholder="Ex. 50">
+      </div>
+      <div class="equipements">
+        <p>Équipements</p>
+        <div>
+          <label><input type="checkbox">PMR</label>
+          <label><input type="checkbox">Cuisine</label>
+          <label><input type="checkbox">Vidéoprojecteur</label>
+          <label><input type="checkbox">Scène</label>
+          <label><input type="checkbox">Parking</label>
+        </div>
+      </div>
+    </div>
+    <div class="salle-container">
+      <p>Nombre de salle dispo</p>
+      <article>
+        <span><img src="public/icones/batiment.svg" alt="Icone d'un batiment"></span>
+        <div>
+          <h2>Titre</h2>
+          <div class="info-salle">
+            <p>Info 1</p>
+            <p>Info 2</p>
+          </div>
+          <div class="salle-equipement">
+            <label>PMR</label>
+            <label>Sonorisation</label>
+            <label>Parking</label>
+          </div>
+          <p class="prix-salle-montvert">Gratuit pour les associations de Montvert</p>
+          <p class="prix-salle-hors">30€/h hors Montvert</p>
+          <a href="salle.html">Voir la salle</a>
+        </div>
+      </article>
+      <button class="afficher-plus">Afficher plus</button>
+    </div>
+  </main>
+  <footer>
+    <p class="footer-titre">Agora - Les salles municipales de Montvert</p>
+    <p>Ville de Montvert - Service Vie associative 02 43 00 00 00</p>
+    <div class="footer-link">
+      <a href="accesibilité.html">Accesibilité</a>
+      <a href="mentions-légales.html">Mention légales</a>
+    </div>
+  </footer>
+  <!--
       Écran à intégrer : le catalogue des salles d'Agora.
       Maquettes : maquettes/Catalogue-mobile.png et maquettes/Catalogue-desktop.png.
       Valeurs (couleurs, tailles, espacements, états) : maquettes/Composants.png.
@@ -33,5 +103,5 @@
 
       Les icônes de la maquette sont dans public/icones/ (SVG, trait de 2 px).
     -->
-  </body>
+</body>
 </html>
