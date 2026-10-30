@@ -6,20 +6,29 @@
 
 :root {
   /* Couleurs principales */
-  --couleur-primaire: #1f4e5f; /* bleu pétrole : en-tête, boutons principaux, focus */
-  --couleur-accent: #d9772b; /* ocre : mise en avant */
-  --couleur-texte-sur-accent: #1c1c1c; /* texte foncé sur l'ocre, pour le contraste */
-  --couleur-fond: #f6f4ee; /* fond de page */
-  --couleur-surface: #ffffff; /* cartes, panneaux, en-tête */
+  --couleur-primaire: #1f4e5f;
+  /* bleu pétrole : en-tête, boutons principaux, focus */
+  --couleur-accent: #d9772b;
+  /* ocre : mise en avant */
+  --couleur-texte-sur-accent: #1c1c1c;
+  /* texte foncé sur l'ocre, pour le contraste */
+  --couleur-fond: #f6f4ee;
+  /* fond de page */
+  --couleur-surface: #ffffff;
+  /* cartes, panneaux, en-tête */
   --couleur-texte: #1c1c1c;
   --couleur-texte-attenue: #5b6770;
-  --couleur-bordure: #d8d5cc; /* bordure des cartes et des séparateurs */
-  --couleur-bordure-champ: #7c868d; /* bordure des champs de formulaire */
-  --couleur-focus: #1f4e5f; /* bordure et halo de 4 px */
+  --couleur-bordure: #d8d5cc;
+  /* bordure des cartes et des séparateurs */
+  --couleur-bordure-champ: #7c868d;
+  /* bordure des champs de formulaire */
+  --couleur-focus: #1f4e5f;
+  /* bordure et halo de 4 px */
   --couleur-erreur: #b3261e;
   --couleur-fond-erreur: #fbe4e1;
   --couleur-fond-information: #e4ecef;
-  --couleur-fond-neutre: #ecebe6; /* étiquettes d'équipement, squelette */
+  --couleur-fond-neutre: #ecebe6;
+  /* étiquettes d'équipement, squelette */
 
   /* Statuts des réservations (texte, fond) */
   --statut-attente-texte: #7a5200;
@@ -38,32 +47,438 @@
   --graisse-normale: 400;
   --graisse-semi-grasse: 600;
   --graisse-grasse: 700;
-  --taille-h1: 2rem; /* 32 px, interligne 40 px */
+  --taille-h1: 2rem;
+  /* 32 px, interligne 40 px */
   --interligne-h1: 2.5rem;
-  --taille-h2: 1.5rem; /* 24 px, interligne 32 px */
+  --taille-h2: 1.5rem;
+  /* 24 px, interligne 32 px */
   --interligne-h2: 2rem;
-  --taille-h3: 1.25rem; /* 20 px, interligne 28 px */
+  --taille-h3: 1.25rem;
+  /* 20 px, interligne 28 px */
   --interligne-h3: 1.75rem;
-  --taille-corps: 1rem; /* 16 px, interligne 24 px */
+  --taille-corps: 1rem;
+  /* 16 px, interligne 24 px */
   --interligne-corps: 1.5rem;
-  --taille-petit: 0.875rem; /* 14 px, interligne 20 px */
+  --taille-petit: 0.875rem;
+  /* 14 px, interligne 20 px */
   --interligne-petit: 1.25rem;
-  --taille-etiquette: 0.75rem; /* 12 px, interligne 16 px */
+  --taille-etiquette: 0.75rem;
+  /* 12 px, interligne 16 px */
   --interligne-etiquette: 1rem;
 
   /* Espacements */
-  --espace-1: 0.5rem; /* 8 px */
-  --espace-2: 1rem; /* 16 px */
-  --espace-3: 1.5rem; /* 24 px */
-  --espace-4: 2rem; /* 32 px */
+  --espace-1: 0.5rem;
+  /* 8 px */
+  --espace-2: 1rem;
+  /* 16 px */
+  --espace-3: 1.5rem;
+  /* 24 px */
+  --espace-4: 2rem;
+  /* 32 px */
 
   /* Rayons, ombre, tailles */
   --rayon-etiquette: 4px;
-  --rayon-bouton: 8px; /* boutons et champs */
+  --rayon-bouton: 8px;
+  /* boutons et champs */
   --rayon-carte: 12px;
   --rayon-pilule: 999px;
   --ombre: 0 1px 2px rgba(0, 0, 0, 0.06);
-  --hauteur-bouton: 48px; /* boutons et champs */
-  --cible-minimale: 44px; /* aucune cible tactile plus petite */
-  --largeur-max: 1200px; /* largeur du contenu en desktop */
+  --hauteur-bouton: 48px;
+  /* boutons et champs */
+  --cible-minimale: 44px;
+  /* aucune cible tactile plus petite */
+  --largeur-max: 1200px;
+  /* largeur du contenu en desktop */
+}
+
+body {
+  font-family: var(--police);
+  font-size: var(--taille-corps);
+  font-weight: var(--graisse-normale);
+  line-height: var(--interligne-corps);
+  color: var(--couleur-texte);
+  background-color: var(--couleur-fond);
+  margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: var(--taille-h1);
+  font-weight: var(--graisse-grasse);
+  line-height: var(--interligne-h1);
+  margin: 0px;
+}
+
+h2 {
+  font-size: var(--taille-h2);
+  font-weight: var(--graisse-grasse);
+  line-height: var(--interligne-h2);
+  margin: 0px;
+}
+
+h3 {
+  font-size: var(--taille-h3);
+  font-weight: var(--graisse-semi-grasse);
+  line-height: var(--interligne-h3);
+  margin: 0px;
+}
+
+p {
+  font-size: var(--taille-corps);
+  font-weight: var(--graisse-normale);
+  line-height: var(--interligne-corps);
+  margin: 0px;
+}
+
+small {
+  font-size: var(--taille-petit);
+  line-height: var(--interligne-petit);
+}
+
+label {
+  font-size: var(--taille-petit);
+  font-weight: var(--graisse-semi-grasse);
+  line-height: var(--interligne-petit);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: var(--couleur-primaire);
+}
+
+main {
+  margin: 0px 16px;
+  flex: 1;
+}
+
+header {
+  height: 56px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 56px;
+  width: 90%;
+  color: var(--couleur-primaire);
+}
+
+nav span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+nav button {
+  border: none;
+  background-color: unset;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav span h2 {
+  font-weight: 600;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titre-page {
+  margin: 24px 0px;
+}
+
+.filtre-container {
+  border: solid 1px var(--couleur-bordure);
+  padding: 16px;
+  background-color: white;
+  border-radius: var(--rayon-carte);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filtre-container span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: var(--couleur-texte-attenue);
+}
+
+.filtre-container span img {
+  height: 18px;
+  padding: 0px 0px 4px 0px;
+  color: var(--couleur-texte-attenue);
+}
+
+.filtre-container span p {
+  font-weight: 600;
+}
+
+.recherche-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10;
+  align-items: center;
+  height: 48px;
+  border: solid 1px var(--couleur-bordure-champ);
+  padding: 0px 16px;
+  border-radius: var(--rayon-bouton);
+}
+
+.recherche-container input {
+  border: none;
+  color: var(--couleur-texte-attenue);
+}
+
+.recherche {
+  font-size: 18px;
+  outline: none;
+}
+
+.quartier {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quartier select {
+  display: flex;
+  flex-direction: row;
+  gap: 10;
+  align-items: center;
+  height: 48px;
+  border: solid 1px var(--couleur-bordure-champ);
+  padding: 0px 16px;
+  border-radius: var(--rayon-bouton);
+  padding: 0px 16px;
+}
+
+.capacité {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.capacité input {
+  display: flex;
+  flex-direction: row;
+  gap: 10;
+  align-items: center;
+  height: 48px;
+  border: solid 1px var(--couleur-bordure-champ);
+  padding: 0px 16px;
+  border-radius: var(--rayon-bouton);
+  padding: 0px 16px;
+  color: var(--couleur-texte);
+  outline: none;
+}
+
+.capacité input::placeholder {
+  color: var(--couleur-texte);
+}
+
+.equipements {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.equipements div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.equipements input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid var(--couleur-bordure-champ);
+  border-radius: var(--rayon-etiquette);
+  margin: 0px;
+  cursor: pointer;
+}
+
+.equipements input[type="checkbox"]:checked {
+  appearance: auto;
+  accent-color: var(--couleur-primaire);
+  border-radius: var(--rayon-etiquette);
+}
+
+.equipements div label {
+  padding: 10px 12px;
+  border: solid 1px var(--couleur-bordure-champ);
+  border-radius: var(--rayon-bouton);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer {
+  padding: 24px 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer p {
+  color: var(--couleur-texte-attenue);
+  font-size: 14px;
+  max-width: 267px;
+}
+
+.footer-titre {
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 400px;
+  color: var(--couleur-texte);
+
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.titre-salles {
+  font-weight: 600;
+  margin: 25px 0px;
+}
+
+.salle-container {}
+
+.salle-container>p {}
+
+.salle-container article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.salle-container article>span {
+  height: 160px;
+  background-color: #217492;
+  border-top-left-radius: var(--rayon-carte);
+  border-top-right-radius: var(--rayon-carte);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.salle-container article>span img {
+  height: 48px;
+}
+
+.card-content {
+  border-bottom-left-radius: var(--rayon-carte);
+  border-bottom-right-radius: var(--rayon-carte);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: white;
+}
+
+.salle-container article h2 {
+  font-size: var(--taille-h3);
+  font-weight: 600;
+}
+
+.info-salle {
+  color: var(--couleur-texte-attenue);
+}
+
+.info-salle p {
+  font-size: var(--taille-petit);
+}
+
+.salle-equipement {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row;
+}
+
+.salle-equipement label {
+  background-color: var(--couleur-fond);
+  padding: 4px 10px;
+  border-radius: var(--rayon-etiquette);
+  font-size: var(--taille-etiquette);
+  font-weight: 200;
+}
+
+.prix-salle-montvert {
+  color: var(--couleur-texte-attenue);
+  font-weight: 400;
+  font-size: var(--taille-petit);
+}
+
+.prix-salle-hors {
+  color: var(--couleur-texte-attenue);
+  font-weight: 400;
+  font-size: var(--taille-petit);
+}
+
+.prix-container {
+  display: flex;
+  flex-direction: column;
+  gap: -2px;
+}
+
+.salle-container article a {
+  width: 100%;
+  height: 48px;
+  background-color: white;
+  border: solid 1px var(--couleur-primaire);
+  border-radius: var(--rayon-bouton);
+  text-decoration: none;
+  color: var(--couleur-primaire);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.afficher-plus {
+    width: 100%;
+  height: 48px;
+  background-color: white;
+  border: solid 1px var(--couleur-primaire);
+  border-radius: var(--rayon-bouton);
+  text-decoration: none;
+  color: var(--couleur-primaire);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
 }
