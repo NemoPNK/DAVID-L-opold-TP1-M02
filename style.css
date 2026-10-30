@@ -376,6 +376,12 @@ footer p {
   margin: 25px 0px;
 }
 
+.salle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
 .salle-container article {
   width: 100%;
   display: flex;
@@ -424,6 +430,7 @@ footer p {
   align-items: center;
   gap: 8px;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .salle-equipement label {
