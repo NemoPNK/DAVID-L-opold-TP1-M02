@@ -377,9 +377,9 @@ footer p {
 }
 
 .salle-container {
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 17px;
 }
 
 .salle-container article {
@@ -484,4 +484,11 @@ footer p {
   align-items: center;
   justify-content: center;
   margin: 20px 0px;
+}
+
+@media (min-width: 1024px) {
+    .salle-container {
+      margin: 20px 0px 0px 0px;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
